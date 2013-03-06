@@ -44,11 +44,15 @@ cabal-version:       >=1.8
 
 library
   -- Modules exported by the library.
-  -- exposed-modules:     
+  exposed-modules:     GLSprite.Type, GLSprite.TextureLoader
   
   -- Modules included in this library but not exported.
   -- other-modules:       
   
   -- Other library packages from which modules are imported.
-  build-depends:       base ==4.6.*
+  build-depends:       base ==4.6.*, OpenGL, SDL, SDL-image
   
+
+executable test-gl-sprite
+  main-is: test/TestGLSprite.hs
+  build-depends: base, OpenGL, SDL, SDL-image
